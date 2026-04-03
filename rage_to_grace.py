@@ -3,7 +3,7 @@ Rage to Grace v1 - Claude Code Circuit Breaker
 ==============================================
 Hold Ctrl+Shift+Space -> record -> transcribe (local) -> rephrase (LLM) -> paste
 
-# Author: [handle TBD]
+# Author: Rage2Grace
 
 Audio feedback (no need to watch terminal):
   soft 440Hz  = recording started
