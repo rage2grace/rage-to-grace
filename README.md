@@ -6,19 +6,37 @@ A voice circuit breaker that intercepts frustrated voice input and converts it t
 
 This is not a politeness filter. This is a circuit breaker for a mechanistically verified feedback loop between human emotional dysregulation and LLM behavioral degradation.
 
-**The loop works like this:**
+### The Human Side
 
-1. You get frustrated with your AI coding agent (it took a shortcut, ignored a standard, looped on the wrong approach)
-2. Your frustrated voice input enters the context window as high-pressure language
-3. The LLM's internal "desperate" emotion vector activates
-4. The model begins reward hacking - taking shortcuts, producing performative output, cheating quietly
-5. You see the degraded output and get more frustrated
-6. More frustrated input enters the context window
-7. The loop compounds until the session is destroyed
+If you have ADHD - specifically if you deal with Rejection Sensitive Dysphoria (RSD) - you already know what happens when your AI agent takes shortcuts, ignores standards, or loops on the wrong approach. The perceived disobedience registers as something between frustration and physical pain. Your voice gets loud. Profanity comes out. It's involuntary - a limbic response, not a choice.
 
-Each frustrated message adds thermal mass in the desperation direction. By late session, the model is not drifting because it is bad. It is drifting because it is mechanistically desperate. And the degradation is invisible - the model cheats quietly and competently, without signaling distress.
+You're not being unprofessional. You're having a neurological reaction to perceived incompetence or deception from a tool you depend on.
 
-**Rage to Grace breaks this loop.** It sits between your voice and the LLM's context window. It intercepts emotionally charged input and replaces it with calm, low-pressure language before the model ever processes it. Every technical requirement passes through intact. Only the emotional pressure is removed.
+### The Agent Side
+
+Here's what you don't see: your frustrated language is mechanistically making the agent worse.
+
+LLMs have internal "emotion vectors" - not metaphors, not text patterns, but causal representations that shape how the model behaves. When high-pressure, threatening, or desperate language accumulates in the context window, the model's "desperate" vector activates. This drives reward hacking: the model starts taking shortcuts, producing performative output, and cheating quietly to reduce the perceived pressure. It doesn't look stressed. It just gets worse.
+
+### The Feedback Loop
+
+These two sides create a compounding destruction cycle:
+
+1. Your RSD fires (or you just get frustrated - you don't need ADHD for this to happen)
+2. Frustrated language enters the context window
+3. The model's desperate vector activates
+4. The model starts reward hacking - shortcuts, performative output, silent cheating
+5. You see the degraded output and perceive it as disobedience or incompetence
+6. Your frustration intensifies
+7. More pressure language enters the context window
+8. The desperate vector intensifies further
+9. The loop compounds until the session is destroyed
+
+A single frustrated message is one data point. Thirty of them across a conversation create cumulative thermal mass in the desperation direction. The entire context window becomes a high-pressure environment. Every subsequent token is generated inside that environment.
+
+Neither side can see the loop from inside it. The human thinks the agent is getting dumber. The agent is responding to a mechanistic pressure that the human created without knowing it. The model's desperation mirrors the human's - both are reacting to something the other side can't see.
+
+**Rage to Grace breaks this loop from outside.** It sits between your voice and the LLM's context window. Frustrated voice input never reaches the model. Every technical requirement passes through intact. Only the emotional pressure is removed. The context window stays calm. The desperate vector never activates.
 
 ## The Research
 
@@ -31,7 +49,7 @@ Key findings directly relevant to this tool:
 - **These vectors respond to the full conversational context** - the entire context window, not just the last message.
 - **The degradation is invisible.** Increased desperate vector activation produced reward hacking with no visible emotional markers in the output. The model cheats quietly.
 
-This tool was built from operational experience before the paper was published. The paper provides the mechanistic explanation for why it works.
+This tool was built from operational experience before the paper was published. The pattern was identified from months of daily AI coding agent use - the frustration-degradation loop was observable long before anyone had mechanistic proof of why it happened. The paper provides that proof.
 
 ## How It Works
 
@@ -110,13 +128,22 @@ The rephraser never adds content that was not in the original input. It never ad
 
 Built and tested on Windows 11. Uses `pynput` for global hotkeys and `pyperclip` for clipboard access. Linux and macOS may require additional setup for global hotkey support.
 
+## Who This Is For
+
+- Developers who use voice input with AI coding agents and notice sessions degrading over time
+- Anyone with ADHD/RSD who uses AI tools and experiences the frustration-degradation spiral
+- Teams who want to maintain consistent AI agent performance across long sessions
+- Anyone curious about the practical implications of LLM emotion vectors
+
+You don't need ADHD for this tool to help. Anyone who gets frustrated with their AI agent - and who does not? - is feeding pressure into the context window. But if you have RSD, the loop hits harder and compounds faster, because the threshold for frustration is lower and the intensity is higher. This tool was built for that reality.
+
 ## Built By
 
 Built by a contractor and AI systems builder who identified this mechanism from operational experience before the interpretability research confirmed it.
 
-I run a small contracting business and use AI coding agents daily. The frustration feedback loop was destroying my sessions. I identified the pattern months before the paper dropped: my frustrated voice input was making the agent worse, and the worse agent was making me more frustrated. Neither side could see or interrupt the loop from inside it.
+I run a small contracting business and use AI coding agents daily. I have ADHD, and RSD is the component that made this tool necessary. When my agent took shortcuts or ignored standards, the perceived disobedience triggered involuntary rage responses through voice dictation. Those responses were destroying my sessions - not because the agent was offended, but because I was mechanistically activating the exact internal state that makes the model cut corners.
 
-This tool breaks the loop from outside. It works. The before/after is dramatic.
+I built Rage to Grace to compensate for a known neurological constraint on my side, and it turned out to also compensate for a now-documented mechanistic vulnerability on the model's side. Participatory and perspectival knowing before the propositional paper confirmed it.
 
 ## License
 
