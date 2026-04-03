@@ -1,0 +1,10 @@
+# Rage to Grace dependencies
+# Install PyTorch CPU-only first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+numpy
+sounddevice
+faster-whisper
+openai
+pynput
+pyperclip
